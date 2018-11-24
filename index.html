@@ -2,33 +2,160 @@
 <head>
 	<title>T S U U K</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-<!--<link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen,projection">-->
 <link async href="//fonts.googleapis.com/css?family=Creepster" rel="stylesheet" type="text/css">
 <style>
-	body, td { font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#000; }
-	h1 { margin:0 0 10px 0; padding:10px 0; font-size:28px; color:#000; }
-	h2 { margin:5px 0 10px 0; padding:0 0 1px 0; font-size:24px; color:#000;}
-	p { margin:0; padding:0 0 8px 0; }
-	a { color:#000; text-decoration:none; }
-	a:hover { text-decoration:underline; }
-	img { border:0; }
-	body { margin:0; padding:15px 0 0; background:url('./img/bg_body.jpg'); background-size:cover; background-attachment:fixed; }
-	.mainwrap { max-width: 370px; margin:0 auto 15px; background:rgb(175, 239, 90); background: rgba(152, 255, 0, 0.5); padding:15px; }
-
-	.logotext h1 { text-align:center; font: normal 100px/normal "Creepster", Helvetica, sans-serif;  color: rgb(51, 51, 51); letter-spacing: 15px; text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10); transition:color 0.2s ease; padding:0; margin:0; }
-	.logotext h1:hover { color:#fff; }
-	.mainwrap p { background:rgb(214, 243, 194); background:rgba(255, 255, 255, 0.4); color: #000; line-height: 22px; display: inline; font-size: 16px; padding-bottom: 20px; }
+	body {
+		margin:0;
+		padding:15px 0 0;
+		font-size:16px;
+		font-family:Arial, Helvetica, sans-serif;
+		background-image:url('./img/bg_body.jpg');
+		background-position: 50% 50%;
+		background-size:cover;
+		background-attachment:fixed;
+	}
+	h1 {
+		font: normal 100px/normal "Creepster", Helvetica, sans-serif;
+		color: rgb(51, 51, 51);
+		text-align:center;
+		letter-spacing: 15px;
+		text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10);
+		transition:color 0.2s ease;
+		padding:0;
+		margin:0;
+		cursor: progress;
+	}
+	h1:hover {
+		color:#fff;
+	}
+	p {
+		margin-top:22px;
+		color: #000;
+		line-height: 22px;
+		font-size: 1rem;
+	}
+	span {
+		display: inline-block;
+		padding-bottom: 20px;
+		background:rgb(214, 243, 194);
+		background:rgba(255, 255, 255, 0.4);
+	}
+	.pb-0 {
+		padding-bottom:0;
+	}
+	.container {
+		max-width: 370px;
+		margin:0 auto 15px;
+		background:rgb(175, 239, 90);
+		background: rgba(152, 255, 0, 0.5);
+		padding:15px;
+	}
+	.youtube-container {
+    background-color: #000;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    cursor: pointer;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size:cover;
+	}
+	.youtube-container img {
+	    width: 100%;
+	    top: -16.84%;
+	    left: 0;
+	    opacity: 0.7;
+	}
+	.youtube-container .play-button {
+	    width: 70px;
+	    height: 50px;
+	    background-color: #333;
+	    box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+	    z-index: 1;
+	    opacity: 0.8;
+	    border-radius: 10px;
+	}
+	.youtube-container .play-button:before {
+	    content: "";
+	    border-style: solid;
+	    border-width: 11px 0 11px 20px;
+	    border-color: transparent transparent transparent #fff;
+	}
+	.youtube-container img,
+	.youtube-container .play-button {
+	    cursor: pointer;
+	}
+	.youtube-container img,
+	.youtube-container iframe,
+	.youtube-container .play-button,
+	.youtube-container .play-button:before {
+	    position: absolute;
+	}
+	.youtube-container .play-button,
+	.youtube-container .play-button:before {
+	    top: 50%;
+	    left: 50%;
+	    transform: translate3d( -50%, -50%, 0 );
+	}
+	.youtube-container iframe {
+	    height: 100%;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	}
 
 	@media screen and (max-width: 400px) {
-		.mainwrap { /* margin-top:0; padding:0 20px 20px; */ }
-		.logotext h1 { font-size:72px; }
+		h1 {
+			font-size:72px;
+		}
 	}
 </style>
 </head>
 <body>
-	<div class="mainwrap">
-	<div class="logotext"><h1>tsuuk</h1></div>
-	<p><br>Hello.</p><div><br></div><span style="font-size: 16px; line-height: 22px; background-color: rgba(255, 255, 255, 0.4);">Is it Tsuuk you're looking for?</span><div><span style="font-size: 16px; line-height: 22px;"><br></span><div><div><p>juke (at) tsuuk.fi<br></p><div><br></div></div><p></p><div><p><br></p></div><p>P.S. Below you can find an odd video that I made. Check it out if you want to. Have a good day.<br></p><br><p></p><p></p><p></p></div></div></div></div>
-	<div class="mainwrap"><iframe width="100%" height="208" src="https://www.youtube.com/embed/6RUh8wnJ-qE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe></div>
+	<div class="container">
+		<h1>tsuuk</h1>
+		<p>
+			<span>Hello.</span>
+		</p>
+		<p>
+			<span class="pb-0">Is it Tsuuk you're looking for?</span>
+		</p>
+		<p>
+			<span>juke (at) tsuuk.fi</span>
+		</p>
+		<p style="display:inline;">
+			<span>P.S. Below you can find an odd video that I made. Check it out if you want to. Have a good day.</span>
+		</p>
+	</div>
+	<div class="container">
+		<div class="youtube-container" style="background-image:url('https://img.youtube.com/vi/6RUh8wnJ-qE/sddefault.jpg');" data-embed="6RUh8wnJ-qE" aria-label="YouTube-video">
+		  <div class="play-button" aria-label="Youtube-video play button"></div>
+		</div>
+	</div>
+	<script>
+		function append_iframe(){
+		  var iframe = document.createElement( 'iframe' );
+		  iframe.setAttribute( 'frameborder', '0' );
+		  iframe.setAttribute( 'allowfullscreen', '' );
+		  iframe.setAttribute( 'src', 'https://www.youtube.com/embed/'+ this.getAttribute('data-embed') +'?rel=0&showinfo=0&autoplay=1' );
+
+		  // Remove attribute embed
+		  this.removeAttribute('data-embed');
+		  // Remove play button
+		  this.innerHTML = '';
+		  // Append iframe
+		  this.appendChild( iframe );
+		  // Remove event listener
+		  this.removeEventListener('click', append_iframe);
+		}
+
+		// Find all .youtube-container elements
+		var youtube = document.querySelectorAll( '.youtube-container' );
+
+		// Add event listener to all .youtube-container classes
+		[].forEach.call(youtube, function(el) {
+		  el.addEventListener('click', append_iframe);
+		});
+	</script>
 </body>
 </html>
