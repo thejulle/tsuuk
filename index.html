@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>T S U U K</title>
+	<title>TSUUK</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <meta name="Description" content="Hello. Is it Tsuuk you're looking for?">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Live electronic music">
+<meta property="og:description" content="Hello. Is it Tsuuk you're looking for?">
+<meta property="og:url" content="https://tsuuk.fi/">
+<meta property="og:site_name" content="TSUUK" />
+<meta name="twitter:title" content="Live electronic music">
+<meta name="twitter:description" content="Hello. Is it Tsuuk you're looking for?">
 <link rel="icon" href="./favicon.ico" type="image/x-icon">
 <link async href="//fonts.googleapis.com/css?family=Creepster&text=kstu" rel="stylesheet" type="text/css">
 <style>
@@ -18,20 +26,143 @@
 		background-size:cover;
 		background-attachment:fixed;
 	}
+  body.startup:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b2e361;
+    z-index: 2;
+  }
+  body.startup h1 {
+    top: 50%;
+    transform:translate(-50%, -50%) scale(2.5);
+  }
 	h1 {
 		font: normal 100px/normal "Creepster", Helvetica, sans-serif;
 		color: rgb(51, 51, 51);
 		text-align:center;
 		letter-spacing: 15px;
-		text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10);
-		transition:color 0.2s ease;
+		transition:color 0.2s ease, transform .5s, top .5s;
 		padding:0;
-		margin:0;
+		margin: 0;
 		cursor: progress;
+		animation: text-flicker-in-glow 5s linear both;
+
+		position: fixed;
+		top: 4.5rem;
+		left: 50%;
+		transform: translate(-50%, -50%);
+    z-index: 3;
 	}
+
 	h1:hover {
 		color:#fff;
 	}
+
+	@keyframes text-flicker-in-glow {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: -3px 0 1px rgb(30,242,241) , 3px 0 1px rgb(246,5,10);
+    }
+	}
+
 	p {
 		margin-top:22px;
 		color: #000;
@@ -115,51 +246,55 @@
 	}
 </style>
 </head>
-<body>
-	<div class="container">
+<body class="startup">
+	<div class="container" style="padding-top: 7rem;">
 		<h1>tsuuk</h1>
 		<p>
 			<span>Hello.</span>
 		</p>
 		<p>
-			<span class="pb-0">Is it Tsuuk you're looking for?</span>
-		</p>
-		<!--<p>
-			<span>juke (at) tsuuk.fi</span>
-		</p>-->
-		<p style="display:inline;">
-			<span>P.S. Below you can find an odd video that I made. Check it out if you want to. Have a good day.</span>
+			<span>Is it Tsuuk you're looking for?</span>
+    </p>
+    <p>
+			<span class="pb-0">Below is a video from my first electronic live gig.</span>
 		</p>
 	</div>
 	<div class="container">
-		<div class="youtube-container" style="background-image:url('https://img.youtube.com/vi/6RUh8wnJ-qE/sddefault.jpg');" data-embed="6RUh8wnJ-qE" aria-label="YouTube-video">
+		<div class="youtube-container" style="background-image:url('https://img.youtube.com/vi/K1Z92WZHA64/0.jpg');" data-embed="K1Z92WZHA64" aria-label="YouTube-video">
 		  <div class="play-button" aria-label="Youtube-video play button"></div>
 		</div>
 	</div>
 	<script>
-		function append_iframe(){
-		  var iframe = document.createElement( 'iframe' );
-		  iframe.setAttribute( 'frameborder', '0' );
-		  iframe.setAttribute( 'allowfullscreen', '' );
-		  iframe.setAttribute( 'src', 'https://www.youtube.com/embed/'+ this.getAttribute('data-embed') +'?rel=0&showinfo=0&autoplay=1' );
+		function appendIframe(){
+		  var iframe = document.createElement('iframe');
+		  iframe.setAttribute('frameborder', '0');
+		  iframe.setAttribute('allowfullscreen', '');
+		  iframe.setAttribute('src', 'https://www.youtube.com/embed/'+ this.getAttribute('data-embed') +'?rel=0&showinfo=0&autoplay=1');
 
 		  // Remove attribute embed
 		  this.removeAttribute('data-embed');
 		  // Remove play button
 		  this.innerHTML = '';
 		  // Append iframe
-		  this.appendChild( iframe );
+		  this.appendChild(iframe);
 		  // Remove event listener
-		  this.removeEventListener('click', append_iframe);
+		  this.removeEventListener('click', appendIframe);
 		}
 
 		// Find all .youtube-container elements
-		var youtube = document.querySelectorAll( '.youtube-container' );
+		var youtube = document.querySelector('.youtube-container');
 
 		// Add event listener to all .youtube-container classes
-		[].forEach.call(youtube, function(el) {
-		  el.addEventListener('click', append_iframe);
-		});
+		if (youtube) {
+			youtube.addEventListener('click', appendIframe);
+    }
+    
+    /**
+     * Remove fullscreen logo after 5.5 seconds
+     */
+    setTimeout(function() {
+      document.querySelector('body').classList.remove('startup');
+    }, 5500);
 	</script>
 </body>
 </html>
